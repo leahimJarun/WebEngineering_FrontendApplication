@@ -28,7 +28,8 @@ for (let id in cart) {
 
 }
 
-let btns = document.querySelectorAll("button");
+//let btns = document.querySelectorAll("button");
+let btns = document.getElementsByClassName("cartDeleteButton");
 
 for (let i = 0; i < btns.length; i++) {
     let btn = btns[i];
