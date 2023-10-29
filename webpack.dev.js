@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     // 1
     // Use the src/index.js file as entry point to bundle it.
     // If the src/index.js file imports other JS files,
@@ -15,7 +15,9 @@ module.exports = {
     // in the /dist folder
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js'//,
+        //libraryTarget: 'window',
+        //library: 'lib'
     },
     // 3
     // The /dist folder will be used to serve our application
@@ -30,7 +32,23 @@ module.exports = {
         new CleanWebpackPlugin,
         new HtmlWebpackPlugin({
             title: "Basic Webpack Setup",
+            filename: "index.html",
             template: path.resolve(__dirname, './src/index.html'),
+        }),
+        new HtmlWebpackPlugin({
+            //title: "Basic Webpack Setup",
+            filename: 'about.html',
+            template: path.resolve(__dirname, './src/html/about.html'),
+        }),
+        new HtmlWebpackPlugin({
+            //title: "Basic Webpack Setup",
+            filename: 'cart.html',
+            template: path.resolve(__dirname, './src/html/cart.html'),
+        }),
+        new HtmlWebpackPlugin({
+            //title: "Basic Webpack Setup",
+            filename: 'formsValidation.html',
+            template: path.resolve(__dirname, './src/html/formsValidation.html'),
         })
     ],
     // 5
@@ -42,7 +60,7 @@ module.exports = {
             {
                 test: /\.(js)$/,
                 exclude: /node_modules/, // files to exclude
-                use: ['babel-loader']
+                use: ['babel-loader'],
             },
             // CSS and SASS
             {
@@ -52,11 +70,15 @@ module.exports = {
                     'css-loader',
                     'sass-loader',
                 ],
-            }
+            },
+            //{
+            //    test: /\.(html)$/i,
+            //    use: 'html-loader',
+            //}
         ]
     },
     resolve: {
         // options for resolving module requests
-        extensions: ['*', '.js']  // files to load
+        extensions: ['.*', '.js', '.css', '.html']  // files to load
     }
 };
