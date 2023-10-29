@@ -8,7 +8,17 @@
   <!--<link rel="stylesheet" href="../css/app.css">-->
   <!--<link rel="stylesheet" href="../css/navBar.css">-->
 </head>
-
+<!-- script inline because of webpack needs to be configured wie js eventhandler TODO -->
+<script>
+  function burgerMenuInline() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
 
 <body>
 
@@ -17,7 +27,7 @@
   <a href="cart.html">Dog-Cart</a>
   <a href="formsValidation.html">Forms-validation</a>
   <a href="about.html">About</a>
-  <a href="javascript:void(0);" class="icon" onclick="navBar.burgerMenu()">
+  <a href="javascript:void(0);" class="icon" onclick="burgerMenuInline()">
     <div class="burgerButton"></div>
     <div class="burgerButton"></div>
     <div class="burgerButton"></div>
