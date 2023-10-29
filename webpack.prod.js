@@ -31,21 +31,25 @@ module.exports = {
         //new ESLintPlugin(options),
         new CleanWebpackPlugin,
         new HtmlWebpackPlugin({
+            inject: false,
             title: "Basic Webpack Setup",
             filename: "index.html",
             template: path.resolve(__dirname, './src/index.html'),
         }),
         new HtmlWebpackPlugin({
+            inject: false,
             //title: "Basic Webpack Setup",
             filename: 'about.html',
             template: path.resolve(__dirname, './src/html/about.html'),
         }),
         new HtmlWebpackPlugin({
+            inject: false,
             //title: "Basic Webpack Setup",
             filename: 'cart.html',
             template: path.resolve(__dirname, './src/html/cart.html'),
         }),
         new HtmlWebpackPlugin({
+            inject: false,
             //title: "Basic Webpack Setup",
             filename: 'formsValidation.html',
             template: path.resolve(__dirname, './src/html/formsValidation.html'),
@@ -79,6 +83,6 @@ module.exports = {
     },
     resolve: {
         // options for resolving module requests
-        extensions: ['.*', '.js', '.css', '.html']  // files to load
+        extensions: ['*', '.js', '.css', '.html']  // files to load
     }
 };
