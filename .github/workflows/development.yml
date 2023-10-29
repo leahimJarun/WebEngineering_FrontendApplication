@@ -6,12 +6,19 @@ on:
 
 jobs:
   test:
+    name: Test
     runs-on: ubuntu-latest # run ubuntu
 
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3 # checkout your repo - this is an official action provided by GitHub
-    - name: Run a multi-line script
-      run: |
-        echo test the checkout action,
-        ls -a
+    - name: Setup
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+    - name: dependencies
+      run: npm ci
+    - name: Run tests
+      run: npm run test --if-present
+    - name: ESLinter
+      run: npm run lint --if-present
