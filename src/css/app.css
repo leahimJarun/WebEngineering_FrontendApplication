@@ -34,18 +34,18 @@
 
 @media screen and (max-width: 1920px) {
     .product {
-        -ms-flex: 70%;
-        flex: 70%;
-        max-width: 70%;
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
     }
 }
 
 
 @media screen and (max-width: 1440px) {
     .product {
-        -ms-flex: 80%;
-        flex: 80%;
-        max-width: 80%;
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
     }
 }
 
