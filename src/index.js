@@ -1,5 +1,5 @@
 // index.js
-console.log("Hello npm project!");
+//console.log("Hello npm project!");
 //import main from "../javascript/main"
 // import "./css/save_style.css";
 // import "./css/app.css";

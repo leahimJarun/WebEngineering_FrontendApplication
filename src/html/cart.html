@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dog Shop / Cart</title>
-  <!--<link rel="stylesheet" href="../css/app.css">-->
-  <!--<link rel="stylesheet" href="../css/navBar.css">-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Shop / Cart</title>
+    <!--<link rel="stylesheet" href="../css/app.css">-->
+    <!--<link rel="stylesheet" href="../css/navBar.css">-->
 </head>
 <!-- script inline because of webpack needs to be configured wie js eventhandler TODO -->
 <script>
-  function burgerMenuInline() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
+    function burgerMenuInline() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
     }
-  }
 </script>
 
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="index.html" class="active">Home</a>
-  <a href="cart.html">Dog-Cart</a>
-  <a href="formsValidation.html">Forms-validation</a>
-  <a href="about.html">About</a>
-  <a href="javascript:void(0);" class="icon" onclick="burgerMenuInline()">
-    <div class="burgerButton"></div>
-    <div class="burgerButton"></div>
-    <div class="burgerButton"></div>
-  </a>
+    <a href="index.html" class="active">Home</a>
+    <a href="cart.html">Dog-Cart</a>
+    <a href="formsValidation.html">Forms-validation</a>
+    <a href="about.html">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="burgerMenuInline()">
+        <div class="burgerButton"></div>
+        <div class="burgerButton"></div>
+        <div class="burgerButton"></div>
+    </a>
 </div>
 
 <p></p>
@@ -39,24 +39,23 @@
 <h1 class="brand">Dog-Cart</h1>
 
 <table>
-  <thead>
-  <tr>
-    <th>Title</th>
-    <th>Price</th>
-    <th>Qty</th>
-  </tr>
-  </thead>
-  <tbody id="tbody">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Qty</th>
+    </tr>
+    </thead>
+    <tbody id="tbody">
 
-  </tbody>
+    </tbody>
 </table>
 
 
-
-<button id="cartButton" class="cartDeleteButton" data-id="delete" data-title="delete" >Delete cart</button>
+<button id="cartButton" class="cartDeleteButton" data-id="delete" data-title="delete">Delete cart</button>
 
 <footer class="container-fluid bg-4 text-center">
-  <p>Done by Mihael Petrovic</p>
+    <p>Done by Mihael Petrovic</p>
 </footer>
 
 <!--<script src="../javascript/cart.js"></script>-->

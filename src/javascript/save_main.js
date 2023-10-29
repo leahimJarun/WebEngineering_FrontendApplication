@@ -1,9 +1,8 @@
-
 //  Module pattern in JS
 //  The module pattern encapsulates 'privacy', state and organization using closures
 //  Protects pieces from leaking to global scope
 
-const app = ( function () {
+const app = (function () {
 
     const allBreedsListAPIEndpoint = 'https://dog.ceo/api/breeds/list/all';
 
@@ -73,7 +72,7 @@ const app = ( function () {
     const fetchAllBreedsFromApiAsync = async () => {
         try {
             const allDogsFromAPIResponse = await fetch(allBreedsListAPIEndpoint)
-            if(allDogsFromAPIResponse.ok != true){
+            if (allDogsFromAPIResponse.ok != true) {
                 throw new Error(`Error: ${allDogsFromAPIResponse.status}`);
             }
             return allDogsFromAPIResponse.json();
@@ -85,20 +84,20 @@ const app = ( function () {
     const getAllBreedsAsync = async () => {
         // Get all dog breeds from API
         const allDogsFromAPI = await fetchAllBreedsFromApiAsync();
-            try {
-                    // Get random image of each breed
-                for (const breed in allDogsFromAPI.message){
-                    let imageUrl = "";
-                    //imageUrl = getRandomImageOfBreed(breed);
+        try {
+            // Get random image of each breed
+            for (const breed in allDogsFromAPI.message) {
+                let imageUrl = "";
+                //imageUrl = getRandomImageOfBreed(breed);
 
-                    imageUrl = await getRandomImageOfBreedAsync(breed);
+                imageUrl = await getRandomImageOfBreedAsync(breed);
 
-                    // Render dog image and name in html
-                    renderBreedInfo(breed, imageUrl);
-                }
-            } catch (error) {
-                console.log(error);
+                // Render dog image and name in html
+                renderBreedInfo(breed, imageUrl);
             }
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     const renderBreedInfo = (breed, imageUrl) => {
@@ -178,7 +177,7 @@ const app = ( function () {
 
     const getRandomImageOfBreedAsync = async (breed) => {
         try {
-            const breedUrl= getRandomImageAPIEndpoint.replace('*', breed)
+            const breedUrl = getRandomImageAPIEndpoint.replace('*', breed)
             const responseRandomImage = await fetch(breedUrl)
             const responseRandomImageFetched = await responseRandomImage.json()
 

@@ -1,9 +1,9 @@
 
-*{
+* {
     font-family: Arial, sans-serif;
 }
 
-html{
+html {
     height: 100%;
 }
 
@@ -12,39 +12,39 @@ a {
     color: rgb(20, 173, 173);
 }
 
-a:hover{
+a:hover {
     color: teal;
 }
 
-main{
+main {
     margin: 3.5em 0.5em 0.5em 0.5em;
     min-height: 100%;
 }
 
-.row{
+.row {
     display: flex;
 }
 
-.center{
+.center {
     justify-content: space-around;
 }
 
-.left{
+.left {
     justify-content: left;
 }
 
-.right{
+.right {
     justify-content: right;
 }
 
-.col{
+.col {
     /*display: flex;
     flex-direction: column;*/
 }
 
 
 /* Navigation */
-nav{
+nav {
     z-index: 9999;
     width: 100%;
     background-color: black;
@@ -60,7 +60,7 @@ nav{
     min-width: 100%;
 }
 
-.listgroup > li{
+.listgroup > li {
     display: flex;
     justify-content: space-between;
     padding: 1em 0.5em 1em 0.5em;
@@ -69,7 +69,7 @@ nav{
     border-bottom: white 1px solid;
 }
 
-button{
+button {
     display: inline-block;
     font-weight: 400;
     text-align: center;
@@ -105,7 +105,7 @@ button{
     background-color: #c6c7c8;
 }
 
-nav > ul{
+nav > ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -113,7 +113,7 @@ nav > ul{
     background-color: #333;
 }
 
-nav> ul > li {
+nav > ul > li {
     float: left;
     display: block;
     color: white;

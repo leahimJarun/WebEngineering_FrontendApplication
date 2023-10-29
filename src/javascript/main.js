@@ -2,7 +2,7 @@
 //  The module pattern encapsulates 'privacy', state and organization using closures
 //  Protects pieces from leaking to global scope
 
-const app = ( function () {
+const app = (function () {
 
     const allBreedsListAPIEndpoint = 'https://dog.ceo/api/breeds/list/all';
 
@@ -72,7 +72,7 @@ const app = ( function () {
     const fetchAllBreedsFromApiAsync = async () => {
         try {
             const allDogsFromAPIResponse = await fetch(allBreedsListAPIEndpoint)
-            if(allDogsFromAPIResponse.ok != true){
+            if (allDogsFromAPIResponse.ok != true) {
                 throw new Error(`Error: ${allDogsFromAPIResponse.status}`);
             }
             return allDogsFromAPIResponse.json();
@@ -84,24 +84,23 @@ const app = ( function () {
     const getAllBreedsAsync = async () => {
         // Get all dog breeds from API
         const allDogsFromAPI = await fetchAllBreedsFromApiAsync();
-            try {
-                let dataId = 1;
-                    // Get random image of each breed
-                for (const breed in allDogsFromAPI.message){
-                    let imageUrl = "";
-                    //imageUrl = getRandomImageOfBreed(breed);
+        try {
+            let dataId = 1;
+            // Get random image of each breed
+            for (const breed in allDogsFromAPI.message) {
+                let imageUrl = "";
+                //imageUrl = getRandomImageOfBreed(breed);
 
-                    imageUrl = await getRandomImageOfBreedAsync(breed);
+                imageUrl = await getRandomImageOfBreedAsync(breed);
 
 
-
-                    // Render dog image and name in html
-                    renderBreedInfo(breed, imageUrl, dataId);
-                    dataId = dataId + 1;
-                }
-            } catch (error) {
-                console.log(error);
+                // Render dog image and name in html
+                renderBreedInfo(breed, imageUrl, dataId);
+                dataId = dataId + 1;
             }
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     const renderBreedInfo = (breed, imageUrl, dataId) => {
@@ -197,7 +196,7 @@ const app = ( function () {
 
     const getRandomImageOfBreedAsync = async (breed) => {
         try {
-            const breedUrl= getRandomImageAPIEndpoint.replace('*', breed)
+            const breedUrl = getRandomImageAPIEndpoint.replace('*', breed)
             const responseRandomImage = await fetch(breedUrl)
             const responseRandomImageFetched = await responseRandomImage.json()
 
@@ -254,7 +253,7 @@ const app = ( function () {
         cart = JSON.parse(localStorage.getItem("cart"));
     }
 
-    if(localStorage.getItem("refresh") !== null){
+    if (localStorage.getItem("refresh") !== null) {
         if (localStorage.getItem("refresh").length !== 0) {
             refresh = 1;
         }
@@ -263,11 +262,11 @@ const app = ( function () {
     const indexPage = document.getElementById("index");
     //console.log("indexPage" + indexPage);
     if (document.getElementById("index") !== null) {
-    updateCart();
+        updateCart();
     }
 
     (function () {
-        window.onpageshow = function(event) {
+        window.onpageshow = function (event) {
             if (event.persisted && refresh === 1) {
                 window.location.reload("Refresh");
                 refresh = 0;
@@ -281,19 +280,19 @@ const app = ( function () {
 
     //let btns = document.querySelectorAll("button");
 //.products button
-/*
-    for (let i = 0; i < btns.length; i++) {
-        let btn = btns[i];
-        btn.addEventListener("click", add);
+    /*
+        for (let i = 0; i < btns.length; i++) {
+            let btn = btns[i];
+            btn.addEventListener("click", add);
 
-        // id = btn.dataset.id;
-        // if (cart.indexOf(id) >= 0) {
-        //     btn.className = "added";
-        //     btn.textContent = "Remove";
-        // }
-    }
+            // id = btn.dataset.id;
+            // if (cart.indexOf(id) >= 0) {
+            //     btn.className = "added";
+            //     btn.textContent = "Remove";
+            // }
+        }
 
- */
+     */
 
     function add(event) {
         let price = Number(event.target.dataset.price);
@@ -350,10 +349,7 @@ const app = ( function () {
     }
 
 
-
-
     /////INSERT END
-
 
 
     //public functions and variables

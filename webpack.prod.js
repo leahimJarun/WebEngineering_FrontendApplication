@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
@@ -28,7 +28,7 @@ module.exports = {
     // 4
     // Add plugins for webpack here
     plugins: [
-        //new ESLintPlugin(options),
+        new ESLintPlugin({failOnError: false, emitWarning: false, quiet: true, emitError: false}),
         new CleanWebpackPlugin,
         new HtmlWebpackPlugin({
             inject: false,

@@ -1,4 +1,3 @@
-
 /* Home page */
 .toolbar {
     display: flex;
@@ -13,6 +12,7 @@
     background-color: white;
     flex-wrap: wrap;
 }
+
 .product {
     /*width: 300px;
     border: 2px solid greenyellow;
@@ -25,6 +25,7 @@
     max-width: 25%;
     padding: 0 4px;
 }
+
 .product img {
     margin-top: 8px;
     vertical-align: middle;
