@@ -18,6 +18,7 @@ import './css/navBar.css';
 //import {navBar} from './javascript/navBar.js';
 import './javascript/main.js';
 import './javascript/cart.js';
+//import './javascript/formValidationButton.js';
 //import './html/about.html';
 //import './html/cart.html';
 // import './html/formsValidation.html';

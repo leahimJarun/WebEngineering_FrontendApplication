@@ -52,7 +52,7 @@ function deleteCart() {
     localStorage.setItem("refresh", "refresh");
 }
 
-function refreshFunction() {
+export function refreshFunction() {
     window.location.reload("Refresh")
 }
 

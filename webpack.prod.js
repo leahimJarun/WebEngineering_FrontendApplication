@@ -75,6 +75,11 @@ module.exports = {
                     'sass-loader',
                 ],
             },
+            { // define typescript loader and file extensions
+                test: /\.tsx?/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
             //{
             //    test: /\.(html)$/i,
             //    use: 'html-loader',
@@ -83,6 +88,6 @@ module.exports = {
     },
     resolve: {
         // options for resolving module requests
-        extensions: ['*', '.js', '.css', '.html']  // files to load
+        extensions: ['*', '.js', '.css', '.html', '.ts']  // files to load
     }
 };

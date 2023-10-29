@@ -111,3 +111,7 @@ tr:nth-child(even) {
     cursor: pointer;
     border-radius: 12px;
 }
+
+div.border {
+    border: 2px solid black;
+}

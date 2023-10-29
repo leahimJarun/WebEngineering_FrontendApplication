@@ -1,7 +1,3 @@
-//  Module pattern in JS
-//  The module pattern encapsulates 'privacy', state and organization using closures
-//  Protects pieces from leaking to global scope
-
 const app = (function () {
 
     const allBreedsListAPIEndpoint = 'https://dog.ceo/api/breeds/list/all';

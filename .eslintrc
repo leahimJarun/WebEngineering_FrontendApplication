@@ -1,5 +1,6 @@
 // inside .eslintrc
 {
+  "jest": true,
   "parser": "@babel/eslint-parser",
   "extends": "airbnb",
   "rules": {
