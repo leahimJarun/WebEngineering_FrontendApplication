@@ -121,8 +121,9 @@ const app = ( function () {
             //nameElement.style.color = "#66b2b2";
 
             const imageElement = document.createElement("img");
-            imageElement.width = "200";
-            imageElement.height = "200";
+            //imageElement.width = "200";
+            //imageElement.height = "200";
+            imageElement.style = "width:100%";
             //let workingUrlOrNot = await checkIfImageIsAvailableWithFetch(imageUrl);
 
             //Cart-Add-Button

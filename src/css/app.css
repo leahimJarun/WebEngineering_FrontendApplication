@@ -11,14 +11,52 @@
     display: flex;
     justify-content: center;
     background-color: white;
+    flex-wrap: wrap;
 }
 .product {
-    width: 300px;
+    /*width: 300px;
     border: 2px solid greenyellow;
     margin: 10px;
     padding: 10px;
-    background-color: aliceblue;
+    background-color: aliceblue;*/
+
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
 }
+.product img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1920px) {
+    .product {
+        -ms-flex: 70%;
+        flex: 70%;
+        max-width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 1440px) {
+    .product {
+        -ms-flex: 80%;
+        flex: 80%;
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .product {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
 
 .added {
     color: white;
