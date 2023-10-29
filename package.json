@@ -8,7 +8,8 @@
     "testWebpackConfig": "webpack serve --config ./webpack.config.js --mode development",
     "start": "webpack serve --config ./webpack.dev.js",
     "build": "webpack --config ./webpack.prod",
-    "test": "jest --watchAll --verbose --coverage"
+    "test": "jest --watchAll --verbose --coverage",
+    "lint": "eslint . --ext .js"
   },
   "jest": {
     "resetMocks": false,
