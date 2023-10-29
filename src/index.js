@@ -9,11 +9,11 @@ console.log("Hello npm project!");
 // import './javascript/navBar';
 // import './javascript/main';
 
-import './css/save_style.css';
+//import './css/save_style.css';
 import './css/app.css';
 import './css/navBar.css';
-import './css/photoGrid.css';
-import './css/responsivePhotoGrid.css';
+//import './css/photoGrid.css';
+//import './css/responsivePhotoGrid.css';
 //import './styles/style.scss';
 //import {navBar} from './javascript/navBar.js';
 import './javascript/main.js';
